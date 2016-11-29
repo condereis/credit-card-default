@@ -12,7 +12,7 @@ PYTHON_INTERPRETER = python
 #################################################################################
 
 ## Install Python Dependencies
-requirements: test_environment
+requirements:
 	pip install -r requirements.txt
 
 ## Make Dataset
