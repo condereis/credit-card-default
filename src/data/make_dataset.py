@@ -14,8 +14,8 @@ def main(input_filepath, output_filepath):
     project_dir = os.path.join(os.path.dirname(__file__), os.pardir, os.pardir)
     raw = pd.read_csv(project_dir + '/data/raw/UCI_Credit_Card.csv')
     train, test = train_test_split(raw, test_size=0.3)
-    train.to_csv(project_dir + '/data/interim/train.csv')
-    test.to_csv(project_dir + '/data/interim/test.csv')
+    train.to_csv(project_dir + '/data/interim/train.csv', index=False)
+    test.to_csv(project_dir + '/data/interim/test.csv', index=False)
     logger = logging.getLogger(__name__)
     logger.info('making final data set from raw data')
 
